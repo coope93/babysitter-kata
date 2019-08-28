@@ -1,9 +1,10 @@
 ##babysitter-kata
+Install PHP
 
-Install PHPUnit Dependency
+Install PHPUnit Dependencies for tests
 
 ```
 composer install
 ```
 
-run `php start.php` to run the program
+run `php start.php` from `/babysitter-kata` to run the program
