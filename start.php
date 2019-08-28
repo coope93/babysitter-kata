@@ -7,16 +7,16 @@
     $validator = new BabysitterValidator();
 
     // Get start time
-    echo 'What time does babysitting start (Please provide in 24 hour time)?';
+    echo 'What time does babysitting start (Please provide in 24 hour time)? ';
     $babysitter->setStartTime(fgets(STDIN));
 
     while (!$validator->isValidStartTime($babysitter->getStartTime())) {
-        echo 'Sorry, invalid start time.';
+        echo 'Sorry, invalid start time. Please enter start time again: ';
         $babysitter->setStartTime(fgets(STDIN));
     }
 
     // Get babysitting end time
-    echo 'What time does babysitting end (Please provide in 24 hour time)?';
+    echo 'What time does babysitting end (Please provide in 24 hour time)? ';
     $babysitter->setEndTime(fgets(STDIN));
 
     while (
@@ -25,13 +25,13 @@
             $babysitter->getEndTime()
         )
     ) {
-        echo 'Sorry, invalid end time.';
+        echo 'Sorry, invalid end time. Please enter end time again: ';
         $babysitter->setEndTime(fgets(STDIN));
     }
 
 
     // Get bed time
-    echo 'What time is bed time (Please provide in 24 hour time)?';
+    echo 'What time is bed time (Please provide in 24 hour time)? ';
     $babysitter->setBedTime(fgets(STDIN));
 
     while (
@@ -41,7 +41,7 @@
             $babysitter->getEndTime()
         )
     ) {
-        echo 'Sorry, invalid bed time.';
+        echo 'Sorry, invalid bed time. Please enter bed time again: ';
         $babysitter->setBedTime(fgets(STDIN));
     }
 
